@@ -1,0 +1,103 @@
+import java.sql.SQLOutput;
+//정답,오답에만 띄어쓰기
+import java.util.Scanner;
+
+public class Quizworld_main {
+    public static void main(String[] args) {
+        int num;
+        String answer;
+        String answer2_1="숭례문";
+        String answer2_2="홍길동전";
+        int life = 3;
+        System.out.println("***********1단계***********");
+        System.out.println("가장 강한 독을 가진 개구리 1마리의 독으로 100명의 사람을 죽일 수 있다.[1/4]");//1번째 문제
+        System.out.println("1.yes 2.no");
+        Scanner scan = new Scanner(System.in);
+        num = scan.nextInt();
+        if (num == 1 || num == 2) {
+            if (num == 1) {
+                System.out.println("정답입니다!\n");
+            } else {
+                System.out.println("오답입니다...\n");
+                life = life - 1;
+            }
+            System.out.println("살모사가 자기 혀를 깨물면 죽는다.[2/4]");//2번째 문제
+            System.out.println("1.yes. 2.no");
+            num = scan.nextInt();
+            if (num == 1 || num == 2) {
+                if (num == 1) {
+                    System.out.println("정답입니다!\n");
+                } else {
+                    System.out.println("오답입니다...\n");
+                    life = life - 1;
+                }
+                System.out.println("세계에서 가장 긴 강은 나일강이다.[3/4]");//3번째 문제
+                System.out.println("1.yes 2.no");
+                num = scan.nextInt();
+                if (num == 1 || num == 2) {
+                    if (num == 1) {
+                        System.out.println("정답입니다!\n");
+                    } else {
+                        System.out.println("오답입니다...\n");
+                        life = life - 1;
+                    }
+                    System.out.println("세계보건기구의 약자는 \"WTO\" 이다.[4/4]");//4번째 문제
+                    System.out.println("1.yes 2.no");
+                    num = scan.nextInt();
+                    if (num == 1 || num == 2) {
+                        if (num == 1) {
+                            System.out.println("정답입니다!\n");
+                        } else {
+                            System.out.println("오답입니다...세계보건기구의 약자는 \"WHO\" 입니다.\n");
+                            life = life - 1;
+                        }
+                    } else {
+                        System.out.println("잘못입력된 값입니다.");//4번째 문제 고르기 오류
+                    }
+                } else {
+                    System.out.println("잘못입력된 값입니다.");
+                }
+            } else {
+                System.out.println("잘못입력된 값입니다.");
+            }
+        }
+        System.out.println("***********2단계***********");
+        System.out.println("국보 1호였던 문화재의 이름은?[1/4]");//2-1문제
+        answer = scan.next();
+        if (answer.equals("숭례문") || life > 1) {
+            if (answer.equals("숭례문")) {
+                System.out.println("정답입니다!\n");
+            } else {
+                life = life - 1;
+                System.out.println("오답입니다...정답은 \"숭례문\"입니다.\n");
+            }
+            System.out.println("우리나라 최초의 한글 소설인 고전 소설의 이름은?(4글자)[2/4]");
+            answer = scan.next();
+            if (answer.equals("홍길동전") || life > 1) {
+                if (answer.equals("홍길동전")) {
+                    System.out.println("정답입니다!\n");
+                } else {
+                    System.out.println("오답입니다...정답은 \"홍길동전\"입니다.");
+                    life = life - 1;
+                }
+                System.out.println("아이스크림을 북한말로 바꾸면?[3/4]");
+                answer = scan.next();
+                if (answer.equals("얼음보숭이") || life > 1) {
+                    if (answer.equals("얼음보숭이")) {
+                        System.out.println("정답입니다!\n");
+                    } else {
+                        System.out.println("오답입니다...정답은 \"얼음보숭이\"입니다.\n");
+                        life = life - 1;
+                    }
+                    System.out.println("");
+                } else {
+                    System.out.println("Game Over");//2-3에서 게임오버
+                }
+            } else {
+                System.out.println("Game Over");//2-2에서 게임오버
+            }
+        } else {
+            System.out.println("Game Over");//2-1에서 게임오버
+        }
+    }
+}
