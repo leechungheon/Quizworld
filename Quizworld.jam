@@ -1,5 +1,6 @@
 import java.sql.SQLOutput;
 //정답,오답에만 /n
+//1.영화, 2.주관식퀴즈 3.다지선다 퀴즈 4. 넌센스퀴즈
 import java.util.Scanner;
 
 public class Quizworld_main {
@@ -7,106 +8,352 @@ public class Quizworld_main {
         int num;
         String answer;
         int life = 3;
-        System.out.println("***********1단계***********");
-        System.out.println("가장 강한 독을 가진 개구리 1마리의 독으로 100명의 사람을 죽일 수 있다.[1/4]");//1번째 문제
-        System.out.println("1.yes 2.no");
+        System.out.println("장르를 선택하세요");
+        System.out.println("1.OX상식\n2.북한말퀴즈\n3.영화\n4.맞춤법");
         Scanner scan = new Scanner(System.in);
         num = scan.nextInt();
-        if (num == 1 || num == 2) {
-            if (num == 1) {
-                System.out.println("정답입니다!\n");
-            } else {
-                System.out.println("오답입니다...\n");
-                life = life - 1;
-            }
-            System.out.println("살모사가 자기 혀를 깨물면 죽는다.[2/4]");//2번째 문제
-            System.out.println("1.yes. 2.no");
+        if (num == 1) {
+            System.out.println("***********OX퀴즈***********");
+            System.out.println("가장 강한 독을 가진 개구리 1마리의 독으로 100명의 사람을 죽일 수 있다.[1/4]");//1번째 문제
+            System.out.println("1.yes 2.no");
             num = scan.nextInt();
             if (num == 1 || num == 2) {
                 if (num == 1) {
-                    System.out.println("정답입니다!\n");
+                    System.out.println("정답입니다!");
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
                 } else {
-                    System.out.println("오답입니다...\n");
+                    System.out.println("오답입니다...");
                     life = life - 1;
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
                 }
-                System.out.println("세계에서 가장 긴 강은 나일강이다.[3/4]");//3번째 문제
-                System.out.println("1.yes 2.no");
+                System.out.println("살모사가 자기 혀를 깨물면 죽는다.[2/4]");//2번째 문제
+                System.out.println("1.yes. 2.no");
                 num = scan.nextInt();
                 if (num == 1 || num == 2) {
                     if (num == 1) {
-                        System.out.println("정답입니다!\n");
+                        System.out.println("정답입니다!");
+                        if (life == 3) {
+                            System.out.println("♥♥♥\n");
+                        } else if (life == 2) {
+                            System.out.println("♥♥♡\n");
+                        } else if (life == 1) {
+                            System.out.println("♥♡♡\n");
+                        }
                     } else {
-                        System.out.println("오답입니다...\n");
+                        System.out.println("오답입니다...");
                         life = life - 1;
+                        if (life == 3) {
+                            System.out.println("♥♥♥\n");
+                        } else if (life == 2) {
+                            System.out.println("♥♥♡\n");
+                        } else if (life == 1) {
+                            System.out.println("♥♡♡\n");
+                        }
                     }
-                    System.out.println("세계보건기구의 약자는 \"WTO\" 이다.[4/4]");//4번째 문제
+                    System.out.println("세계에서 가장 긴 강은 나일강이다.[3/4]");//3번째 문제
                     System.out.println("1.yes 2.no");
                     num = scan.nextInt();
                     if (num == 1 || num == 2) {
                         if (num == 1) {
-                            System.out.println("정답입니다!\n");
+                            System.out.println("정답입니다!");
+                            if (life == 3) {
+                                System.out.println("♥♥♥\n");
+                            } else if (life == 2) {
+                                System.out.println("♥♥♡\n");
+                            } else if (life == 1) {
+                                System.out.println("♥♡♡\n");
+                            }
                         } else {
-                            System.out.println("오답입니다...세계보건기구의 약자는 \"WHO\" 입니다.\n");
+                            System.out.println("오답입니다...");
                             life = life - 1;
+                            if (life == 3) {
+                                System.out.println("♥♥♥\n");
+                            } else if (life == 2) {
+                                System.out.println("♥♥♡\n");
+                            } else if (life == 1) {
+                                System.out.println("♥♡♡\n");
+                            }
+                        }
+                        if (life > 0) {
+                            System.out.println("세계보건기구의 약자는 \"WTO\" 이다.[4/4]");//4번째 문제
+                            System.out.println("1.yes 2.no");
+                            num = scan.nextInt();
+                            if (num == 1 || num == 2) {
+                                if (num == 2) {
+                                    System.out.println("정답입니다!");
+                                    if (life == 3) {
+                                        System.out.println("♥♥♥\n");
+                                    } else if (life == 2) {
+                                        System.out.println("♥♥♡\n");
+                                    } else if (life == 1) {
+                                        System.out.println("♥♡♡\n");
+                                    }
+                                } else if (life > 1) {
+                                    System.out.println("오답입니다...세계보건기구의 약자는 \"WHO\" 입니다.");
+                                    life = life - 1;
+                                    if (life == 3) {
+                                        System.out.println("♥♥♥\n");
+                                    } else if (life == 2) {
+                                        System.out.println("♥♥♡\n");
+                                    } else if (life == 1) {
+                                        System.out.println("♥♡♡\n");
+                                    }
+                                } else {
+                                    System.out.println("오답입니다...\nGame Over");//4번째 문제에서 게임오버
+                                }
+                            } else {
+                                System.out.println("잘못입력된 값입니다.");//4번째 문제 고르기 오류
+                                life = 0;
+                            }
+                        } else {
+                            System.out.println("Game Over");//조건문끝, 3번문제에서 게임오버
                         }
                     } else {
-                        System.out.println("잘못입력된 값입니다.");//4번째 문제 고르기 오류
+                        System.out.println("잘못입력된 값입니다.");//3번째 문제 고르기 오류
+                        life = 0;
+                    }
+                } else {
+                    System.out.println("잘못입력된 값입니다.");//2번째 문제 고르기 오류
+                    life = 0;
+                }
+            } else {
+                System.out.println("잘못입력된 값입니다.");//1번째 문제 고르기 오류
+                life = 0;
+            }
+        } else if (num == 2) {
+            System.out.println("***********북한말퀴즈***********");
+            System.out.println("북한말로 색동다리라고 하는 것은?[1/4]");//2-1문제
+            answer = scan.next();
+            if (answer.equals("무지개") || life > 1) {
+                if (answer.equals("무지개")) {
+                    System.out.println("정답입니다!");
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
+                } else {
+                    life = life - 1;
+                    System.out.println("오답입니다...정답은 \"무지개\"입니다.");
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
+                }
+                System.out.println("북한말로 기름밥이라고 하는 것은?[2/4]");
+                answer = scan.next();
+                if (answer.equals("볶음밥") || life > 1) {
+                    if (answer.equals("볶음밥")) {
+                        System.out.println("정답입니다!");
+                        if (life == 3) {
+                            System.out.println("♥♥♥\n");
+                        } else if (life == 2) {
+                            System.out.println("♥♥♡\n");
+                        } else if (life == 1) {
+                            System.out.println("♥♡♡\n");
+                        }
+                    } else {
+                        System.out.println("오답입니다...정답은 \"볶음밥\"입니다.");
+                        life = life - 1;
+                        if (life == 3) {
+                            System.out.println("♥♥♥\n");
+                        } else if (life == 2) {
+                            System.out.println("♥♥♡\n");
+                        } else if (life == 1) {
+                            System.out.println("♥♡♡\n");
+                        }
+                    }
+                    System.out.println("아이스크림을 북한말로 바꾸면?[3/4]");
+                    answer = scan.next();
+                    if (answer.equals("얼음보숭이") || life > 1) {
+                        if (answer.equals("얼음보숭이")) {
+                            System.out.println("정답입니다!");
+                            if (life == 3) {
+                                System.out.println("♥♥♥\n");
+                            } else if (life == 2) {
+                                System.out.println("♥♥♡\n");
+                            } else if (life == 1) {
+                                System.out.println("♥♡♡\n");
+                            }
+                        } else {
+                            System.out.println("오답입니다...정답은 \"얼음보숭이\"입니다.");
+                            life = life - 1;
+                            if (life == 3) {
+                                System.out.println("♥♥♥\n");
+                            } else if (life == 2) {
+                                System.out.println("♥♥♡\n");
+                            } else if (life == 1) {
+                                System.out.println("♥♡♡\n");
+                            }
+                        }
+                        System.out.println("북한말로 볼웃음이라고 하는 것은?[4/4]");
+                        answer = scan.next();
+                        if (answer.equals("미소") || life > 1) {
+                            if (answer.equals("미소")) {
+                                System.out.println("정답입니다!");
+                                if (life == 3) {
+                                    System.out.println("♥♥♥\n");
+                                } else if (life == 2) {
+                                    System.out.println("♥♥♡\n");
+                                } else if (life == 1) {
+                                    System.out.println("♥♡♡\n");
+                                }
+                            } else {
+                                System.out.println("오답입니다...정답은 \"미소\"입니다.");
+                                life = life - 1;
+                                if (life == 3) {
+                                    System.out.println("♥♥♥\n");
+                                } else if (life == 2) {
+                                    System.out.println("♥♥♡\n");
+                                } else if (life == 1) {
+                                    System.out.println("♥♡♡\n");
+                                }
+                            }
+                        } else {
+                            System.out.println("오답입니다...정답은 \"미소\"입니다.\nGame Over");//2-4에서 게임오버
+                        }
+                    } else {
+                        System.out.println("오답입니다...정답은 \"얼음보숭이\"입니다.\nGame Over");//2-3에서 게임오버
+                    }
+                } else {
+                    System.out.println("오답입니다...정답은 \"볶음밥\"입니다.\nGame Over");//2-2에서 게임오버
+                }
+            } else {
+                System.out.println("오답입니다...정답은 \"무지개\"입니다.\nGame Over");//2-1에서 게임오버
+            }
+        } else if (num == 3) {
+            System.out.println("***********영화퀴즈***********");
+            System.out.println("다음 중 국내에서 천만관객을 돌파하지 못한 영화는?[1/5]");//3-1
+            System.out.println("1.내부자들\n2.부산행\n3.7번방의 선물\n4.명량\n5.범죄도시3");
+            num = scan.nextInt();
+            if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5) {
+                if (num == 1) {
+                    System.out.println("정답입니다!");
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
+                } else {
+                    System.out.println("오답입니다. 정답은 \"1.내부자들\"입니다.");
+                    life = life - 1;
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
+                }
+                System.out.println("아래의 영화 제목은?[2/5]\nㅅㄱㅎㄲ");//3-2
+                answer = scan.next();
+                if (answer.equals("신과함께")) {
+                    System.out.println("정답입니다!");
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
+                } else {
+                    System.out.println("오답입니다...정답은\"신과함께\"입니다.");
+                    life = life - 1;
+                    if (life == 3) {
+                        System.out.println("♥♥♥\n");
+                    } else if (life == 2) {
+                        System.out.println("♥♥♡\n");
+                    } else if (life == 1) {
+                        System.out.println("♥♡♡\n");
+                    }
+                }
+                System.out.println("다음 중 개봉한지 가장 오래된 영화는?[3/5]");//3-3
+                System.out.println("1.곡성\n2.님아, 그 강을 건너지마오\n3.부당거래\n4.비열한 거리\n5.해운대");
+                num = scan.nextInt();
+                if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5) {
+                    if (num == 4) {
+                        System.out.println("정답입니다!");
+                        if (life == 3) {
+                            System.out.println("♥♥♥\n");
+                        } else if (life == 2) {
+                            System.out.println("♥♥♡\n");
+                        } else if (life == 1) {
+                            System.out.println("♥♡♡\n");
+                        }
+                    } else {
+                        System.out.println("오답입니다...정답은 \"4.비열한 거리(2006)\"입니다.");
+                        life = life - 1;
+                        if (life == 3) {
+                            System.out.println("♥♥♥\n");
+                        } else if (life == 2) {
+                            System.out.println("♥♥♡\n");
+                        } else if (life == 1) {
+                            System.out.println("♥♡♡\n");
+                        }
                     }
                 } else {
                     System.out.println("잘못입력된 값입니다.");
+                    life = 0;
                 }
-            } else {
-                System.out.println("잘못입력된 값입니다.");
-            }
-        }
-        System.out.println("***********2단계***********");
-        System.out.println("국보 1호였던 문화재의 이름은?[1/4]");//2-1문제
-        answer = scan.next();
-        if (answer.equals("숭례문") || life > 1) {
-            if (answer.equals("숭례문")) {
-                System.out.println("정답입니다!\n");
-            } else {
-                life = life - 1;
-                System.out.println("오답입니다...정답은 \"숭례문\"입니다.\n");
-            }
-            System.out.println("우리나라 최초의 한글 소설인 고전 소설의 이름은?(4글자)[2/4]");
-            answer = scan.next();
-            if (answer.equals("홍길동전") || life > 1) {
-                if (answer.equals("홍길동전")) {
-                    System.out.println("정답입니다!\n");
-                } else {
-                    System.out.println("오답입니다...정답은 \"홍길동전\"입니다.\n");
-                    life = life - 1;
-                }
-                System.out.println("아이스크림을 북한말로 바꾸면?[3/4]");
-                answer = scan.next();
-                if (answer.equals("얼음보숭이") || life > 1) {
-                    if (answer.equals("얼음보숭이")) {
-                        System.out.println("정답입니다!\n");
-                    } else {
-                        System.out.println("오답입니다...정답은 \"얼음보숭이\"입니다.\n");
-                        life = life - 1;
-                    }
-                    System.out.println("낙타의 혹은 대부분 OO으로 차있다. OO은?[4/4]");
-                    answer=scan.next();
-                    if(answer.equals("지방")||life>1){
-                        if(answer.equals("지방")){
+                if (life > 0) {
+                    System.out.println("다음 중 존재하지 않는 영화는?[5/5]");//3-5
+                    System.out.println("1.스타워즈9:라이즈 스카이 워커\n2.터미네이터6:다크 페이트\n3.컨저링3\n4.해리포터와 불사조의 알\n");
+                    num = scan.nextInt();
+                    if (num == 1 || num == 2 || num == 3 || num == 4) {
+                        if (num == 4) {
                             System.out.println("정답입니다!");
-                        }else{
-                            System.out.println("오답입니다...정답은 \"지방\"입니다.\n");
-                            life=life-1;
+                            if (life == 3) {
+                                System.out.println("♥♥♥\n");
+                            } else if (life == 2) {
+                                System.out.println("♥♥♡\n");
+                            } else if (life == 1) {
+                                System.out.println("♥♡♡\n");
+                            }
+                        } else {
+                            System.out.println("오답입니다...정답은 \"4.해리포터와 불사조의 알\"입니다.");
+                            life = life - 1;
+                            if (life == 3) {
+                                System.out.println("♥♥♥\n");
+                            } else if (life == 2) {
+                                System.out.println("♥♥♡\n");
+                            } else if (life == 1) {
+                                System.out.println("♥♡♡\n");
+                            }else{
+                                System.out.println("Game Over");
+                            }
                         }
-                    }else{
-                        System.out.println("Game Over");//2-4에서 게임오버
+                    } else {
+                        System.out.println("잘못입력된 값입니다.");//3-5오류
+                        life = 0;
                     }
                 } else {
-                    System.out.println("Game Over");//2-3에서 게임오버
+                    System.out.println("Game Over");//3-5 오류
+                    life = 0;
                 }
+
             } else {
-                System.out.println("Game Over");//2-2에서 게임오버
+                System.out.println("잘못입력된 값입니다.");//3-1 오류
+                life = 0;
             }
-        } else {
-            System.out.println("Game Over");//2-1에서 게임오버
         }
     }
 }
